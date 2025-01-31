@@ -54,8 +54,18 @@ app = Flask(__name__)
 def render_index_page():
     return render_template('index.html', debug=True)
 
+@app.route('/contact', methods=['GET'])
+def render_contact_page():
+    return render_template('contact.html', debug=True)
+
+@app.route('/about', methods=['GET'])
+def render_about_page():
+    return render_template('about.html', debug=True)
+
 @app.route('/predict', methods=['GET', 'POST'])
 def get_data():
+
+
     if request.method == 'GET':
         return render_template('data_collection.html', debug=True)
     else:

@@ -1,0 +1,17 @@
+{
+    "precision": 0.977818853974122,
+    "recall": 0.9869402985074627,
+    "f1_score": 0.9823584029712163,
+    "accuracy": 0.977751756440281,
+    "confusion_matrix": [
+        [
+            306,
+            12
+        ],
+        [
+            7,
+            529
+        ]
+    ],
+    "model_name": "RandomForestClassifier"
+}
