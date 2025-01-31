@@ -29,9 +29,12 @@ class DataIngestion:
             logging.info("Data saved successfully to csv")
 
             train_set,test_set = train_test_split(data,test_size=0.2,random_state=42)
+            train_set.drop(columns=['loan_id'],inplace=True)
+            test_set.drop(columns=['loan_id'],inplace=True)
             train_set.to_csv(self.ingestion_config.train_data_path,header=True,index=False)
             test_set.to_csv(self.ingestion_config.test_data_path,header=True,index=False)
             logging.info("Data split successfully into train and test")
+
 
             return(
                 self.ingestion_config.train_data_path,

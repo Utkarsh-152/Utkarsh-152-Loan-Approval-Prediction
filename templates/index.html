@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Predictor</title>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- Custom CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            color: #333;
+        }
+
+        .logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 3em;
+            margin-bottom: 20px;
+            opacity: 0;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #666;
+            opacity: 0;
+        }
+
+        .description {
+            max-width: 800px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0;
+        }
+
+        .cta-button {
+            padding: 12px 24px;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            opacity: 0;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .creator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">UTKARSH</div>
+    
+    <nav>
+        <a href="/predict">Predict</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="https://linkedin.com/in/utkarsh-tripathi-0144001b2/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Utkarsh-152/Utkarsh-152-Loan-Approval-Prediction" target="_blank">Repository</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="title">Loan Approval Predictor</h1>
+        <h2 class="subtitle">AI-Powered Loan Eligibility Assessment</h2>
+        <p class="description">
+            Welcome to our advanced loan approval prediction system. Using machine learning algorithms,
+            we analyze various factors such as income, credit history, and employment status to predict
+            loan approval probability. This tool helps both lenders and borrowers make informed decisions
+            quickly and efficiently.
+        </p>
+        <a href="/predict" class="cta-button">Try Prediction</a>
+    </div>
+
+    <div class="creator">Created by Utkarsh</div>
+
+    <script>
+        // GSAP Animations
+        gsap.from(".logo", {
+            duration: 1,
+            x: -100,
+            opacity: 0,
+            ease: "power3.out"
+        });
+
+        gsap.from("nav a", {
+            duration: 1,
+            y: -50,
+            opacity: 0,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+        gsap.to(".title", {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            delay: 0.5,
+            ease: "power3.out"
+        });
+
+        gsap.to(".subtitle", {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            delay: 0.8,
+            ease: "power3.out"
+        });
+
+        gsap.to(".description", {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            delay: 1.1,
+            ease: "power3.out"
+        });
+
+        gsap.to(".cta-button", {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            delay: 1.4,
+            ease: "power3.out"
+        });
+
+        gsap.from(".creator", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            delay: 1.6,
+            ease: "power3.out"
+        });
+    </script>
+</body>
+</html>

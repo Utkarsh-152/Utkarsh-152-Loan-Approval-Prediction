@@ -1,0 +1,17 @@
+{
+    "precision": 0.9775700934579439,
+    "recall": 0.9757462686567164,
+    "f1_score": 0.976657329598506,
+    "accuracy": 0.9707259953161592,
+    "confusion_matrix": [
+        [
+            306,
+            12
+        ],
+        [
+            13,
+            523
+        ]
+    ],
+    "model_name": "DecisionTreeClassifier"
+}
