@@ -61,17 +61,8 @@ source venv/bin/activate  # For Linux/Mac
 ```bash
 pip install -r requirements.txt
 ```
-
-4. Set up environment variables
-Create a `.env` file with:
-```env
-host=your_mysql_host
-user=your_mysql_user
-password=your_mysql_password
-db=your_database_name
-```
-
-5. Run the application
+g
+4. Run the application
 ```bash
 python app.py
 ```
