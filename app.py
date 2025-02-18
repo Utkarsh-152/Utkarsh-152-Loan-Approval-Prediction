@@ -20,31 +20,31 @@ if __name__ == "__main__":
 
     logging.info("Application has started")
 
-    try:
-        data_ingestion = DataIngestion()
-        data_ingestion_config = DataIngestionConfig()
-        train_data,test_data = data_ingestion.initiate_data_ingestion()
-        logging.info("Data ingestion completed successfully")
+    #try:
+        #data_ingestion = DataIngestion()
+        #data_ingestion_config = DataIngestionConfig()
+        # train_data,test_data = data_ingestion.initiate_data_ingestion()
+        #logging.info("Data ingestion completed successfully")
 
-        data_transformation = DataTransformation()
-        data_transformation_config = DataTransformationConfig()
-        X_train_scaled_df, X_val_scaled_df, X_test_scaled_df, y_train, y_val, y_test, preprocessor_path = data_transformation.initiate_data_transformation(train_data, test_data)
-        logging.info("Data transformation completed successfully")
+        #data_transformation = DataTransformation()
+        #data_transformation_config = DataTransformationConfig()
+        # X_train_scaled_df, X_val_scaled_df, X_test_scaled_df, y_train, y_val, y_test, preprocessor_path = data_transformation.initiate_data_transformation(train_data, test_data)
+        #logging.info("Data transformation completed successfully")
 
-        model_trainer = ModelTrainer()
-        model_trainer_config = ModelTrainerConfig()
-        model_trainer.initiate_model_trainer(X_train_scaled_df, X_val_scaled_df, X_test_scaled_df, y_train, y_val, y_test)
-        best_model = model_trainer.initiate_model_trainer(X_train_scaled_df, X_val_scaled_df, X_test_scaled_df, y_train, y_val, y_test)
-        print(f"Best model found on both training and validation set is {best_model}")
-        logging.info("Model training completed successfully")
+        #model_trainer = ModelTrainer()
+        #model_trainer_config = ModelTrainerConfig()
+        #model_trainer.initiate_model_trainer(X_train_scaled_df, X_val_scaled_df, X_test_scaled_df, y_train, y_val, y_test)
+        #best_model = model_trainer.initiate_model_trainer(X_train_scaled_df, X_val_scaled_df, X_test_scaled_df, y_train, y_val, y_test)
+        #print(f"Best model found on both training and validation set is {best_model}")
+        #logging.info("Model training completed successfully")
 
-        monitor = ModelPerformanceMonitoring()
+        #monitor = ModelPerformanceMonitoring()
 
-        metrics = monitor.generate_report(best_model, X_test_scaled_df, y_test)
-        logging.info("Model performance monitoring completed successfully")
-    except Exception as e:
-        logging.info("Error occured while running the application")
-        raise CustomException(e, sys)
+        #metrics = monitor.generate_report(best_model, X_test_scaled_df, y_test)
+        #logging.info("Model performance monitoring completed successfully")
+    #except Exception as e:
+        #logging.info("Error occured while running the application")
+        #raise CustomException(e, sys)
 
 
 
